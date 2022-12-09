@@ -37,7 +37,7 @@ public class TestController {
 	public String testController() {
 		try {
 		
-			RedisClient redisClient= RedisClient.create(DefaultClientResources.create(), RedisURI.create("localhost", 6379));
+			RedisClient redisClient= RedisClient.create(DefaultClientResources.create(), RedisURI.create("10.244.3.6", 6379));
 			StatefulRedisConnection<String, String> redis= redisClient.connect();
 		
 		return "Success";}
