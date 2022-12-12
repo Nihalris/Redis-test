@@ -5,25 +5,25 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.5</version>
+		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.realnet</groupId>
-	<artifactId>RedisCache</artifactId>
+	<artifactId>ChatAppApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>RedisCache</name>
-	<description>Demo project for redis cache</description>
+	<name>ChatAppApi</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-data-jpa</artifactId>
-  </dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+			<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -41,12 +41,28 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+    		<groupId>org.json</groupId>
+    		<artifactId>json</artifactId>
+    		<version>20220320</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.5</version>
+		</dependency>
 		
-		 <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-   <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-cache -->
 		
 	</dependencies>
 

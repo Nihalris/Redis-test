@@ -1,15 +1,13 @@
-package com.redis;
+package com.realnet.redis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
-@EnableCaching
-public class RedisCacheApplication {
+public class ChatAppApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RedisCacheApplication.class, args);
+		SpringApplication.run(ChatAppApiApplication.class, args);
 	}
 
 }
