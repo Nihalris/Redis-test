@@ -43,7 +43,7 @@ public class RedisConfiguration {
 
     @Bean(destroyMethod = "shutdown")
     RedisClient redisClient(ClientResources clientResources) {
-        return RedisClient.create(clientResources, RedisURI.create("localhost", 6379));
+        return RedisClient.create(clientResources, RedisURI.create("10.101.58.10", 6379));
     }
 
     @Bean(destroyMethod = "close")
@@ -63,7 +63,7 @@ public class RedisConfiguration {
     public JedisConnectionFactory connectionFactory() {
         RedisStandaloneConfiguration configuration = new RedisStandaloneConfiguration();
 //        configuration.setHostName("my-redis-store.5w9upe.0001.use2.cache.amazonaws.com");
-        configuration.setHostName("localhost");
+        configuration.setHostName("10.101.58.10");
         configuration.setPort(6379);
         return new JedisConnectionFactory(configuration);
     }
@@ -162,7 +162,8 @@ public class RedisConfiguration {
 		container.addMessageListener(componentMessagelistenerAdapter(), topic4());
 		System.out.println(container.getConnectionFactory());
 		return container;
-	}
+	}
+
 	
 	
 
